@@ -93,7 +93,7 @@ class Typesense
             $document->delete();
             $collectionIndex->getDocuments()
                             ->create($array);
-        } catch (ObjectNotFound) {
+        } catch (ObjectNotFound $e) {
             $collectionIndex->getDocuments()
                             ->create($array);
         }
